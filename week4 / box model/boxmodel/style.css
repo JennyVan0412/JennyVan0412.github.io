@@ -1,0 +1,47 @@
+/* https://colorhunt.co/palette/1a120b3c2a21d5cea3e5e5cb */
+
+body {
+  background-color: #1a120b;
+  display: flex;
+  text-align: center;
+  margin: auto;
+  max-width: 1000px;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #804eff;
+  font-size: 1.1rem;
+}
+h1 {
+}
+
+.outer {
+  border: 1px dashed floralwhite;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.inner {
+  background-color: #e5e5cb;
+  width: 100px;
+  height: 100px;
+  border: 3px solid lightcoral;
+}
+
+p {
+  /* line-height: 120px; */
+  /* padding: 10px; */
+}
+
+a,
+span {
+  display: none;
+}
