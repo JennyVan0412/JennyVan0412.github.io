@@ -1,3 +1,61 @@
+const openTimerButton = document.querySelector("#open-timer");
+const timerScreen = document.querySelector("#timerscreen");
+
+openTimerButton.addEventListener(
+  "click",
+
+  function showHideTimer() {
+    if (timerScreen.style.display === "block") {
+      timerScreen.style.display = "none";
+    } else {
+      timerScreen.style.display = "block";
+    }
+  }
+);
+
+const startEl = document.getElementById("start");
+const stopEl = document.getElementById("stop");
+const resetEl = document.getElementById("reset");
+const timercountEl = document.getElementById("timercount");
+
+let interval;
+let timeLeft = 1500;
+
+function updateTimer() {
+  let minutes = Math.floor(timeLeft / 60);
+  let seconds = timeLeft % 60;
+  let formattedTime = `${minutes.toString().padStart(2, "0")}:${seconds
+    .toString()
+    .padStart(2, "0")}`;
+
+  timercountEl.innerHTML = formattedTime;
+}
+
+function startTimer() {
+  interval = setInterval(() => {
+    timeLeft--;
+    updateTimer();
+    if (timeLeft === 0) {
+      clearInterval(interval);
+      alert("Time's up!");
+      timeLeft = 1500;
+      updateTimer();
+    }
+  }, 1000);
+}
+function stopTimer() {
+  clearInterval(interval);
+}
+function resetTimer() {
+  clearInterval(interval);
+  timeLeft = 1500;
+  updateTimer();
+}
+
+startEl.addEventListener("click", startTimer);
+stopEl.addEventListener("click", stopTimer);
+resetEl.addEventListener("click", resetTimer);
+
 const video = document.querySelector("#my-video");
 video.removeAttribute("controls");
 const playPauseButton = document.querySelector("#play-pause-button");
@@ -38,16 +96,28 @@ function updateVolume() {
   console.log("Volume changed:", volume);
 }
 
-//volume values range from 0 to 1 with an increment of 0.1
 function increaseVolume() {
   if (video.volume < 0.9) {
     video.volume += 0.1;
   }
 }
 
-//since you do not want the value to go to negative the check is not at 0 but 0.11
 function decreaseVolume() {
   if (video.volume > 0.11) {
     video.volume -= 0.1;
   }
 }
+
+/*
+const fullscreenButton = document.querySelector("#fullscreen-button");
+console.log(fullscreenButton);
+
+fullscreenButton.addEventListener("click", goFullscreen);
+
+function goFullscreen() {
+  if (!document.isFullscreen) {
+    video.requestFullscreen();
+  } else {
+    document.exitFullscreen();
+  }
+}*/

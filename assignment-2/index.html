@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<!-- First and foremost, I would like to talk about my choice of context and specifically what I want to deliver to the users through this website. 
+I've chosen to do a study/relaxation website as I've realized upon myself that most of my time are spent listening to ambient music to study on Youtube. 
+However, due to the excessive ads that ruined my experience and random cut out to different songs, I hope to create a website that solely focuses on and serves the purpose of 
+going to the website only to listen to ambient music and study. And in my case, I've personally chosen this game and art style because the video that inspired my original ideation itself is an ambient playlist of mix tracks from Persona 5 
+- the game that I've just mentioned, which are always playing on loop for me. Thus, I wanted to take this opportunity to design a website that is simple and straightforwardly helpful in helping one relax/study but if you are a Persona fan, 
+you can also get to enjoy the feeling of 'experiencing'or being in the game but you are actually studying. I wanted to immerse my users into the space of the Le Blanc cafe (the video's main space), to just mainly listen to the music 
+and focus on whatever tasks they have on hands. -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,16 +14,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Arsenal:wght@700&display=swap" rel="stylesheet">
 <!--https://www.reddit.com/r/Persona5/comments/gmw6hz/persona_5_royal_fonts_if_i_find_more_about_the/ I've chosen the Arsenal font family and the rest of the used fonts
-as part of my research into the inspired look of the game I am referencing. This is a reddit post I found talking about the fonts that I could use to replicate the game's font. -->
+as part of my research into the inspired look of the game I am referencing. This is a reddit post I found talking about the fonts that I could use to replicate the game's font. 
+I planned to also use one other fonts which could be a great switch up to the styling, however it was in a OTF file along with glyphs, and I was unsure if I was able to use it so I had to stick with one font in the end. -->
     <title>LeBlanc Study Cafe</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="reset.css" />
-    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="mainscreen">
 
-       <!-- <video autoplay loop muted plays-inline class="bgvideo">
+       <!-- This is one of the backdrop video (also another calming scene from the game) that I was planning to use in the beginning, however, as I realized if I used both videos, the immersiveness of the users might be disturbed.
+        This is because even though I planned for the backdrop to be lower in  opacity, it would still affect the users line of sight and having to see many features (icons,looping video backdrop,main video player) 
+        together at once could be uncomfortable - especially for a study website. 
+        
+        <video autoplay loop muted plays-inline class="bgvideo">
             <source src="peoplebg.mp4" type="video/mp4">
         </video> -->
 
@@ -24,16 +35,36 @@ as part of my research into the inspired look of the game I am referencing. This
         <source src="cafe leblanc ambience.mp4" type="video/mp4"</video>
         </video>
 
+    <!-- I have decided to choose this video and to put it on loop because it is one of the design choice I've made in relation to my website's purpose.
+        Since I wanted the web to be easy to use and highly non-distracting, I wanted to minimize the ability of users to be able to choose their own songs. And also because my website is supposed to be 
+        immersive in one headspace and to ignite the feeling that you wanted to be lost/live in the space itself, I wanted the loop-conitnous music to never end to support that concept. 
+    -->
+
         <nav>
             <ul>
+                <!--In my original plan, I have had the idea to implement a todo list/tracker for the website as it is a study aid that I find very helpful as a student myself. However, due to time 
+                    constaints, I regret deeply that I was not able to include the idea into the final work. Another reason the idea was not plausible because my plan was to make both the to-do list and timer a draggable div box. 
+                    However, again as I was not aware of my time management, I did not have the courage to take up the challenge in spite of time, I would however love to keep experiment with these features going forward. -->
               <li><a href="#">TO-DO</a></li>
-              <li><img src="img-a2/p5logo.png" alt="ps5logo" width="100" heght="100" class="logo"/></li>
-              <li><a href="#">TIMER</a></li>
+              <li><img src="img-a2/p5logo.png" alt="ps5logo" width="100" heght="100" class="logo"/></li> <!--Shigenori S (3AD) PHANTOM THIEVES OF HEARTS LOGO, 
+                https://1000logos.net/wp-content/uploads/2022/03/Phantom-Thieves-of-Hearts-Logo.jpg?fbclid=IwAR1511qQCc8KdWfOylz1S54vhyNau1u-chpH16Ie1EnX9JpXZGRLrgpOS1I, accessed 19 May 2024.-->
+              <li><button id="open-timer">TIMER</button></li>
             </ul>
           </nav>
 
-        <!-- This is an ambience video of soundtracks from one of my favourite video games, which I've been listening to constantly
-        when I study, thus the reason I've chosen it for my studying web context.-->
+    <!--For this pomodoro timer, I've watched and learn how to implement it into my code through this youtube tutorial: https://www.youtube.com/watch?v=_9QQf-RpPlM--
+    I have chosen this tutorial in particular because I liked its simple feature that is straight to the point and is easy to use, which was fitting with my web context. -->
+
+          <div id="timerscreen">
+            <h1 class="title"> Pomodoro!</h1>
+            <p class="timercount" id="timercount">25:00</p>
+            <div class="timer-button">
+                <button id="start">Start</button>
+                <button id="stop">Stop</button>
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+
         
             <div class="custom-controls">
           <button id="play-pause-button">
@@ -73,17 +104,24 @@ as part of my research into the inspired look of the game I am referencing. This
                 />
         </button>
         </div>
-      </div>
+    </div>
     </main>
 
-    <!-- Footer Section -->
+
+    <!-- Footer Section 
+        At the footer, I would like to reference and give credits to the Youtuber whose video I am using for this assignment and the game that I got heavily inspired from - Persona 5.
+        Ambience Academy. "Café Leblanc | Coffee Shop Ambience: Smooth Jazz Persona Music & Rain to Study, Relax, & Sleep" Youtube, uploaded by Ambience Academy, 5th August 2022, https://youtu.be/ZXni9_91ORs?si=dFDU0H0GgpyZtf11
+    -->
+
     <footer>
       Video credits by
-      <a href="https://icons8.com">Ambience Academy</a>
+      <a href="https://youtu.be/ZXni9_91ORs?si=dFDU0H0GgpyZtf11">Ambience Academy</a>
       <br>
       Icons inspired by
-      <a href="https://icons8.com">Persona 5</a>
+      <a href="https://persona5.jp/">Persona 5</a>
+      <!--All of the icons (except for the logo icon at the nav bar) every other icons are hand-drawn by me, as I was not able to find icons of the functions that I needed for this assignment. -->
     </footer>
 </div>
+<script src="script.js" defer></script>
   </body>
 </html>
