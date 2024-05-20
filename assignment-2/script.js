@@ -13,6 +13,8 @@ openTimerButton.addEventListener(
   }
 );
 
+/* Above is an event that I've written to hide and open the timer upon clicking the timer button at the nav bar.*/
+
 const startEl = document.getElementById("start");
 const stopEl = document.getElementById("stop");
 const resetEl = document.getElementById("reset");
@@ -55,6 +57,8 @@ function resetTimer() {
 startEl.addEventListener("click", startTimer);
 stopEl.addEventListener("click", stopTimer);
 resetEl.addEventListener("click", resetTimer);
+
+/* This is the code that I've learnted from the youtube video that I've referenced in the html sheet.*/
 
 const video = document.querySelector("#my-video");
 video.removeAttribute("controls");

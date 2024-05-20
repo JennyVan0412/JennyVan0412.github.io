@@ -1,3 +1,5 @@
+/*Despite it is a study, relaxing website, the main color scheme I've chosen to go with belongs to the game that I was referencing to, which are the three main colors of black, white and red.
+This is the only colors that I tried to stick to throughout the website for consistency of the art style. */
 body,
 h1,
 p,
@@ -33,6 +35,10 @@ body {
   text-align: center;
   display: none;
 }
+
+/* As mentioned before, I originally wanted the pomodoro timer and to-do list to be draggable boxes that opened up upon a click and is a box that can be drag around the site.
+However, due to lack of time, I had to resolve to leaving the box on the side of the web. Although I think this is still a succesful design as I've also had some problems with the
+controls layout so this was a good substitution to the overall layout.*/
 
 .title {
   font-size: 30px;
@@ -70,7 +76,12 @@ button:hover {
   background-color: gray;
 }
 
-/* The following code is https://www.youtube.com/watch?v=emL9dkijfZY and https://www.youtube.com/watch?v=znqUwx0b0HI */
+/* The following code for the mainVideo media are my studies of these two youtube videos https://www.youtube.com/watch?v=emL9dkijfZY and https://www.youtube.com/watch?v=znqUwx0b0HI.
+I'm not sure if this was permittable or if it's against our assignment requirement (as I am changing up the layout) but since I was already set on the big background video/backdrop idea 
+from the beginning. I wanted to pursue and try it out as it is also the main/biggest point in my website, to immerse the users into the space of the video.
+
+However, I struggled alot with this layout as I found out through research that usually people would only use muted button-less looping video as the background
+but because mine was with buttons. It was definietly a hard challenge for me. */
 
 .mainvideo {
   position: absolute;
@@ -118,6 +129,10 @@ nav a {
   color: white;
 }
 
+/*Previously in my sketching plan, I wanted my play button to be on the left side of the web while the volume would be a flex column on the right. 
+However, as I implemented the full background screen video, I ran into a few problems with th flex boxes and had to resolve with all of the buttons in a single flex column. Despite that, 
+I am still very happy with the results as I think it still make sense and also seems to be even easier/more direct to use.*/
+
 .custom-controls {
   display: flex;
   justify-content: center;
@@ -136,7 +151,12 @@ nav a {
   align-items: baseline;
 }
 
-/*.gofullscreen {
+/* I initially planned to also have a fullscreen element to fully immerse the users into the studyscape, to help with not seeing the other distractions on their devices. 
+However, the plan had to be put off as I did not have enough time to trouble shoot some of the problems I encounter while implementing it.
+I think one of the reason could have been from my main media player is already a full-screen backdrop video. 
+But I figure there should be a way around it if I have had more time to work through the problem carefully.
+
+.gofullscreen {
   width: fit-content;
   height: auto;
   padding: 10px;
@@ -153,7 +173,9 @@ nav a {
   right: 0;
 } */
 
-/* Footer styling */
+/* I've had my footer set to be positioned fixed to the site as I've noticed due to the main media player's responsiveness, it was a bit hard to work around 
+with the layout of the web and so I wanted to tie at least the footer down so that there are no further misplacements. */
+
 footer {
   text-align: center;
   color: grey;
