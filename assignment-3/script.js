@@ -55,6 +55,22 @@ cutout.forEach((cutout) => {
   });
 });
 /*
+const instructions = document.querySelector("#instructions");
+const notes = document.querySelector("#notes");
+
+instructions.addEventListener(
+  "click",
+
+  function showHideInstructions() {
+    if (notes.style.display === "block") {
+      notes.style.display = "none";
+    } else {
+      notes.style.display = "block";
+    }
+  }
+  Above is my previous code to hide and unhide the instructions box.
+);
+/*
 image_array = [
   "1.png",
   "2.png",
