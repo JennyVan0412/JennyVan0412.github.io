@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CollaDump</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+  </head>
+
+  <!-- For this assignment, I wanted to create a website that solely serves the purpose of helping the user to create collages of images through the main interaction of dragging images.
+  I hope by coming to this website, the users can upload their own photos, generate random decoration icons and then drag/resize the said images to create their collage. Most of the coded layout for the stack and draggable images are from this youtube video that 
+  I have stumbled on and studied from it: https://www.youtube.com/watch?v=NpBZtR1nLwA. I've made changes that fit with my context but however have keep a few details as well as I'm unable to change certain feature accordingly to will.-->
+  <body>
+    <div
+      class="cutout"
+      style="left: calc(56vw - 400px); top: calc(50vh - 280px)"
+    >
+      <div class="content">
+        <img src="colladump/24.png" alt="cutout1" />
+      </div>
+      <div class="corner"></div>
+    </div>
+
+    <div
+      class="cutout"
+      style="left: calc(46vw + 90px); top: calc(50vh - 120px)"
+    >
+      <div class="content">
+        <img src="colladump/20.png" alt="cutout2" />
+      </div>
+      <div class="corner"></div>
+    </div>
+    <div
+      class="cutout"
+      style="left: calc(50vw - 50px); top: calc(50vh - 320px)"
+    >
+      <div class="content">
+        <img src="colladump/21.png" alt="cutout3" />
+      </div>
+      <div class="corner"></div>
+    </div>
+
+    <div
+      class="cutout"
+      style="left: calc(45vw - 100px); top: calc(50vh - 100px)"
+    >
+      <div class="content">
+        <img src="colladump/22.png" alt="cutout4" />
+      </div>
+      <div class="corner"></div>
+    </div>
+
+    <div
+      class="cutout"
+      style="left: calc(41vw - 320px); top: calc(50vh - 90px)"
+    >
+      <div class="content">
+        <img src="colladump/23.png" alt="cutout5" />
+      </div>
+      <div class="corner"></div>
+    </div>
+
+    <div
+      class="cutout"
+      style="left: calc(50vw - 250px); top: calc(40vh - 90px)"
+    >
+      <div class="content">
+        <img src="colladump/19.png" alt="cutout6" />
+      </div>
+      <div class="corner"></div>
+    </div>
+
+    <div
+      class="cutout"
+      style="left: calc(80vw - 250px); top: calc(40vh - 90px)"
+    >
+      <div class="content">
+        <img src="colladump/25.png" alt="cutout7" />
+      </div>
+      <div class="corner"></div>
+    </div>
+
+    <div
+      class="cutout"
+      style="left: calc(33vw - 250px); top: calc(32vh - 90px)"
+    >
+      <div class="content">
+        <img src="images/14.png" alt="cutout8" />
+      </div>
+      <div class="corner"></div>
+    </div>
+
+    <div
+      class="cutout"
+      style="left: calc(80vw - 250px); top: calc(60vh - 90px)"
+    >
+      <div class="content">
+        <img src="images/7.png" alt="cutout9" />
+      </div>
+      <div class="corner"></div>
+    </div>
+
+    <div
+      class="cutout"
+      style="left: calc(25vw - 250px); top: calc(40vh - 90px)"
+    >
+      <div class="content">
+        <img src="images/3.png" alt="cutout10" />
+      </div>
+      <div class="corner"></div>
+    </div>
+
+    <div
+      class="cutout"
+      style="left: calc(80vw - 250px); top: calc(20vh - 90px)"
+    >
+      <div class="content">
+        <img src="images/12.png" alt="cutout11" />
+      </div>
+      <div class="corner"></div>
+    </div>
+
+    <div
+      class="cutout"
+      style="left: calc(40vw - 250px); top: calc(15vh - 90px)"
+    >
+      <div class="content">
+        <img src="images/18.png" alt="cutout12" />
+      </div>
+      <div class="corner"></div>
+    </div>
+
+    <div
+      class="cutout"
+      style="left: calc(80vw - 250px); top: calc(10vh - 90px)"
+    >
+      <div class="content">
+        <img src="images/5.png" alt="cutout13" />
+      </div>
+      <div class="corner"></div>
+    </div>
+
+    <div
+      class="cutout"
+      style="left: calc(55vw - 250px); top: calc(60vh - 90px)"
+    >
+      <div class="content">
+        <img src="images/10.png" alt="cutout14" />
+      </div>
+      <div class="corner"></div>
+    </div>
+
+    <!--
+  <div id="container">
+      <div id="inner_container">
+        <img id="icon_generator" />
+      </div>
+      <div id="button_container">
+        <button onclick="get_random_icon()">
+          <img
+            id="random_button"
+            src="colladump/shuffle.png"
+            alt="Random Generator"
+            width="30"
+            height="30"
+          />
+        </button>
+      </div>
+    </div>
+    Due to unexpected changes, issues and time constraints, I've decided not to add any other additional features other than the dragging and
+    resizing feature which is the main interaction of this page. I very much regret that I'm unable to add in the other ideas that I have previously planned, but I also
+    didn't want to ruin any of my current code and delay my submission any further, hence the decision above.
+
+    In this note, I was coding up the button for a random image generator, picking out an image from an array. I've used free icons look from the internet
+    and reference them below. 
+
+    It is also due to the unexpected change, I've decided to add more pictures in for my main interaction, as opposed to only the 7 original pictures.
+-->
+    <!--<a href="https://www.flaticon.com/free-icons/random" title="random icons">Random icons created by Wahyu Adam - Flaticon</a>-->
+    <div id="instructions">
+      <h4 class="notes">
+        Click and drag to create a collage! <br />
+        Give me a click so I can hide myself!<br />
+        Hover to the bottom right corner of the picture to resize it to your
+        content!
+      </h4>
+    </div>
+    <!--<a href="https://www.flaticon.com/free-icons/visibility" title="visibility icons">Visibility icons created by Rizki Ahmad Fauzi - Flaticon</a>-->
+    <script src="script.js" defer></script>
+  </body>
+</html>

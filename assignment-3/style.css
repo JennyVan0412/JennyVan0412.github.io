@@ -1,0 +1,89 @@
+body {
+  height: 100vh;
+  overflow: clip;
+}
+/*
+button {
+  border: none;
+  background-color: transparent;
+  padding: 8px 12px;
+  cursor: pointer;
+  float: right;
+}*/
+
+/*I wanted the minimum height and width to be 300px as this would be overall larger and easier to click and for viewing purposes.*/
+.cutout {
+  position: absolute;
+  width: var(--cutout-default-width);
+  height: var(--cutout-default-height);
+  display: grid;
+  cursor: move;
+  min-width: 300px;
+  min-height: 300px;
+}
+
+.cutout .content {
+  position: relative;
+}
+
+.cutout .content img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: cover;
+
+  -webkit-user-drag: none;
+}
+
+/*I've decided to keep and put the resizing point to be at the bottom right corner as I noticed this is a common point people go to when wanting to resize their photo.
+I originally wanted to have resizeable points for all four corners but I realized this could possibly be hard to navigate and obstructing other images, for eg: accidentally clicking another picture when wanting to resize one's image. */
+.cutout .corner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  cursor: nwse-resize;
+}
+
+/*I've chosen to use the shade orangered because red is one of the easiest color to identify
+with the human eyes and for my website where you will have to deal with a bunch of different images, I wanted the border to stand out as much as possible. 
+Although I could've done an even brighter or neon colors which would definitely helps with standing out, I feel like they would brings back too much attention to itself. 
+As this is a simple collaging web, I would want it to still have the basic correlation to it and not have anything over the top. */
+
+.cutout.is-selected {
+  border: 2px solid orangered;
+  border-radius: 10px;
+}
+/*I wanted a simple look for the website hence I want to go with a simple default font as chosen below.
+.notes {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  display: flex;
+  color: black;
+  background-color: whitesmoke;
+  opacity: 0.2;
+  padding: 10px 20px;
+  margin: 10px;
+  float: left;
+}
+/*
+#container {
+  width: 50%;
+  height: 600px;
+
+  border-radius: 5px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+*/
